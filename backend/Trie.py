@@ -1,6 +1,3 @@
-from typing import Dictionary
-
-
 class Node:
     def __init__(self, data=None, terminal: bool = False) -> None:
         """
@@ -9,7 +6,7 @@ class Node:
         """
         self.terminal: bool = terminal
         self.data: str = data
-        self.children: Dictionary = {}
+        self.children = {}
 
 
 class Trie:
