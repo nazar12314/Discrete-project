@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="container">
       <div className="row">
-        <form class="col s6 offset-s3">
+        <form class="col m6 s12 offset-m3">
           <div className="col s12 heading-pile">
             <div className="heading">Autocomplete</div>
             <FontAwesomeIcon className="search-icon" icon={faMagnifyingGlass} />
@@ -55,7 +55,7 @@ const List = ({ items }) => {
         display: Object.keys(items[0] || {}).length === 0 ? "none" : "flex",
       }}
     >
-      <div className="row">
+      <div className="row item-wrapper">
         {items.map((item) => (
           <Item key={item.id} value={item.value}></Item>
         ))}
@@ -65,7 +65,7 @@ const List = ({ items }) => {
 };
 
 const Item = ({ value }) => {
-  return <div className="wrapper col">{value}</div>;
+  return <div className="wrapper col m6 s12">{value}</div>;
 };
 
 export default App;

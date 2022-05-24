@@ -42,8 +42,12 @@ body {
 .wrapper {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 50px !important;
-  margin-right: 5px;
-  margin-bottom: 5px;
   font-size: 1rem;
   font-family: "Quicksand", sans-serif;
+}
+
+.item-wrapper {
+  margin: 0;
+  width: 100%;
+  padding-bottom: 20px;
 }

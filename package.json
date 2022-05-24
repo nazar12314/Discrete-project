@@ -1,0 +1,25 @@
+{
+  "name": "discrete_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm install && cd frontend && npm install",
+    "dev": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazar12314/Discrete-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazar12314/Discrete-project/issues"
+  },
+  "homepage": "https://github.com/nazar12314/Discrete-project#readme",
+  "dependencies": {
+    "concurrently": "^7.2.1",
+    "nodemon": "^2.0.16"
+  }
+}
