@@ -4,7 +4,7 @@
 
 #### Clone it from the repo
 ```shell
-git clone https://github.com/nazar12314/Discrete-project.git
+git clone https://github.com/nazar12314/Discrete-project.git .
 ```
 #### Install node modules
 ```shell
