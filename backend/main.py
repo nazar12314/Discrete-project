@@ -16,6 +16,7 @@ trie.insert('hijab')
 trie.insert('hola')
 trie.insert("how do do?")
 
+
 @app.route('/api')
 def api():
     query = request.args.get('search')

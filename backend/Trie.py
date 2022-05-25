@@ -1,5 +1,7 @@
 class Node:
-    def __init__(self, data=None, terminal: bool = False) -> None:
+    def __init__(
+        self, data=None, terminal: bool = False, transitional: bool = False
+    ) -> None:
         """
         arg: children -> dictionary of children of the given Node
         arg: terminal -> boolean value to check whether a node is an end of the word
@@ -39,6 +41,9 @@ class Trie:
         Returns:
             Boolean: whether a word is present in the tree
         """
+        if word == "":
+            return False
+
         temporary = self._root
 
         for char in word:
@@ -63,7 +68,7 @@ class Trie:
         temporary: Node = self._root
 
         for char in query:
-            temporary = temporary.children[char]        
+            temporary = temporary.children[char]
 
         def depth_first_search(node: Node, prefix: str) -> None:
             """Helper function for iterating through the deep of a tree.
@@ -94,12 +99,40 @@ class Trie:
             return 1 + max(self.height(node.children[child]) for child in node.children)
 
     def delete(self, word: str) -> bool:
-        pass
+        """
+        Delete word, if it is present in tree.
+
+        Args:
+            word(str): value to remove
+
+        Returns:
+            bool: True, if value is present in tree and deleted
+                  False, if value is absent in tree
+        """
+        if not self.exists(word):
+            return False
+
+        parent: Node = self._root
+        child = parent.children[word[0]]
+
+        for char in word[1:]:
+            parent = child
+            child = parent.children[char]
+
+        if child.terminal:
+            if child.children is None:
+                parent.children.pop(child.data)
+            else:
+                child.terminal = False
+            return True
+        else:
+            return False
 
     def __str__(self) -> str:
         """
         String representation of a tree
         """
+
         def recursive_helper(node: Node, level: int) -> str:
             """
             Recursive helper function for str
@@ -112,4 +145,4 @@ class Trie:
                     result += str(child) + "\n"
             return result
 
-        return recursive_helper(self._root,  0)
+        return recursive_helper(self._root, 0)
