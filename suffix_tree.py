@@ -98,9 +98,9 @@ class SuffixTree:
 # example of use
 if __name__ == "__main__":
     tree = SuffixTree("abbabcbb")
-    print(tree.search_pattern("bb"))
+    print(tree.search_pattern("bb")) # [6, 1]
     # rebuild tree
     tree.remake("bbb")
-    print(tree.search_pattern("bb"))
+    print(tree.search_pattern("bb")) # [1, 0]
 
 
