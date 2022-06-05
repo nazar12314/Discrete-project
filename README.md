@@ -67,4 +67,37 @@ Result:
 ```
 
 ### Suffix tree
-<Roma>
+Suffix tree is a compressed trie containing all the suffixes of the given text
+
+Each node contains two values: index of suffix from original text, and length of that suffix.
+
+For example, if text is "Ukraine", then node with suffix "ine" would look like (4, 3). 4 - index of "i", 3 - length of "ine".
+#### To create a suffix tree from text "banana"
+```python
+tree = SuffixTree("banana")
+```
+#### Tree would look like
+```
+             "0"
+      "na" -> 
+             "na0"              
+root ->
+      "0"
+      "banana0"
+            "0"
+      "a" ->
+                   "0"
+            "na" ->
+                   "na0"
+```
+0 represents end of a line.
+
+In fact, we do not store strings, but a pair of numbers, as was written above. This is just for visualization.
+#### Search word in a tree
+```python
+tree.search_pattern("na")
+```
+#### Result
+```shell
+[4, 2] # "na" is on position 2 and 4
+```
