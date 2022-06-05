@@ -1,3 +1,6 @@
+"""Suffix tree"""
+
+
 class Node:
     def __init__(self, position=None, length=None):
         """

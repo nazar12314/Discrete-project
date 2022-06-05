@@ -1,3 +1,6 @@
+"""Prefix tree"""
+
+
 class Node:
     def __init__(self, data=None, terminal: bool = False) -> None:
         """
@@ -93,7 +96,32 @@ class Trie:
             return 1 + max(self.height(node.children[child]) for child in node.children)
 
     def delete(self, word: str) -> bool:
-        pass
+        """
+        Delete word, if it is present in tree.
+        Args:
+            word(str): value to remove
+        Returns:
+            bool: True, if value is present in tree and deleted
+                  False, if value is absent in tree
+        """
+        if not self.exists(word):
+            return False
+
+        parent: Node = self._root
+        child = parent.children[word[0]]
+
+        for char in word[1:]:
+            parent = child
+            child = parent.children[char]
+
+        if child.terminal:
+            if child.children is None:
+                parent.children.pop(child.data)
+            else:
+                child.terminal = False
+            return True
+        else:
+            return False
 
     def __str__(self) -> str:
         """
