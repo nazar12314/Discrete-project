@@ -46,6 +46,25 @@ tree = Trie()
 ```python
 tree.insert("and")
 tree.insert("ant")
+tree.insert("cat")
 ```
+#### At this point our tree looks like this
+                      "t"
+        "a" -> "n" -> 
+                      "d"              
+root -> 
+
+        "c" -> "a" -> "t"
+                      
+#### Search in a Trie
+To search, we write a query 
+```python
+tree.search("a") ## "a" is a query
+```
+Result:
+```shell
+["and", "ant"]
+```
+
 ### Suffix tree
 <Roma>
