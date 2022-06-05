@@ -49,9 +49,9 @@ tree.insert("ant")
 tree.insert("cat")
 ```
 #### At this point our tree looks like this
-                      "t"
+                        "t"
           "a" -> "n" -> 
-                      "d"              
+                        "d"              
     root -> 
 
           "c" -> "a" -> "t"
