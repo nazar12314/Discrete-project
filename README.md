@@ -52,7 +52,7 @@ tree.insert("cat")
                       "t"
         "a" -> "n" -> 
                       "d"              
-    root -> 
+   root -> 
 
         "c" -> "a" -> "t"
                       
