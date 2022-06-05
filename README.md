@@ -27,8 +27,5 @@ https://user-images.githubusercontent.com/59284695/172040783-3b3a59dd-5724-499b-
 https://user-images.githubusercontent.com/59284695/172040839-a8b44f15-c17e-475d-bc3e-e7e006bb7068.mov
 
 The program consists of two parts:
- - Backend
-  -- All logic of the project, including trees representation and server.
-  All the code implemented with python, server runs using Flask
- - Frontend
-  --Vizualisation of the project. Implemented using react js
+ - Backend (All logic of the project, including trees representation and server. All the code implemented with python, server runs using Flask)
+ - Frontend (Vizualisation of the project. Implemented using react js.)
