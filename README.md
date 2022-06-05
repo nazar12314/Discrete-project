@@ -50,11 +50,11 @@ tree.insert("cat")
 ```
 #### At this point our tree looks like this
                       "t"
-        "a" -> "n" -> 
+          "a" -> "n" -> 
                       "d"              
-   root -> 
+    root -> 
 
-        "c" -> "a" -> "t"
+          "c" -> "a" -> "t"
                       
 #### Search in a Trie
 To search, we write a query 
