@@ -23,7 +23,6 @@ class Trie:
             word (str): a word to insert
         """
         temporary: Node = self._root
-
         for char in word:
             if char not in temporary.children:
                 temporary.children[char] = Node(data=char)
@@ -63,7 +62,7 @@ class Trie:
         temporary: Node = self._root
 
         for char in query:
-            temporary = temporary.children[char]        
+            temporary = temporary.children[char]     
 
         def depth_first_search(node: Node, prefix: str) -> None:
             """Helper function for iterating through the deep of a tree.
