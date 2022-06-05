@@ -29,3 +29,23 @@ https://user-images.githubusercontent.com/59284695/172040839-a8b44f15-c17e-475d-
 The program consists of two parts:
  - Backend (All logic of the project, including trees representation and server. All the code implemented with python, server runs using Flask)
  - Frontend (Vizualisation of the project. Implemented using react js.)
+
+## Implemented data structures
+
+In this project we implemented two tree-type data structures - Prefix tree (general form of Trie) and Suffix tree (compresed from of Trie)
+
+### Prefix tree
+
+Preffix tree of Trie is a tree constructed to work with strings. In general it is a tree where every node is a single letter.
+
+#### To create a Prefix tree
+```python
+tree = Trie()
+```
+#### After we can insert some words into it
+```python
+tree.insert("and")
+tree.insert("ant")
+```
+### Suffix tree
+<Roma>
